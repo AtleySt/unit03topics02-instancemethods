@@ -40,7 +40,7 @@ public class Point2D {
         Point2D A = new Point2D(0, 0);
         Point2D B = new Point2D(4, 3);
 
-        System.out.println(A);
+        System.out.println(A.distanceTo(B));
         
     }
 }

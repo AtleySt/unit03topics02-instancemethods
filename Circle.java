@@ -11,9 +11,12 @@ public class Circle {
         this.center = center;
     }
 
+    public Circle(int i, int j, int k) {
+    }
+
     public double getArea() {
         double res = 0.0;
-        res = (pi*radius)*(pi*radius);
+        res = (pi)*(radius*radius);
         return res;
     }
     public double getCircumference() {
@@ -40,6 +43,28 @@ public class Circle {
 
 
     public static void main(String[] args) {
-        
+        Point2D AC = new Point2D(0, 0);
+        Point2D BC = new Point2D(10, 0);
+        Circle A = new Circle(5,BC);
+        Circle B = new Circle(4,AC);
+
+        System.out.println("The area of Circle A is " + A.getArea());
+        System.out.println("The area of Circle B is " + B.getArea());
+        System.out.println("The circumference of Circle A is " + A.getCircumference());
+        System.out.println("The circumference of Circle B is " + B.getCircumference());
+
+        if (A.intersects(B)) {
+            System.out.println("Circle A intersects Circle B");
+        } else {
+            System.out.println("Circle A does not intersect Circle B");
+        }
+        if (A.contains(B)) {
+            System.out.println("Circle A contains Circle B");
+        } else if (B.contains(A)) {
+            System.out.println("Circle B contains Circle A");
+        } else {
+            System.out.println("Neither Circle A or B contain one another");
+        }
+
     }
 }
