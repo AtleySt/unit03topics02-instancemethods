@@ -1,3 +1,6 @@
+import java.nio.channels.ClosedByInterruptException;
+import java.util.concurrent.ThreadPoolExecutor.DiscardOldestPolicy;
+
 public class Circle {
     private double radius;
     private Point2D center = new Point2D(5, 2);
@@ -19,11 +22,11 @@ public class Circle {
         return res;
     }
 
-    public boolean intersects(Circle other) {
-
-    }
+    // public boolean intersects(Circle other) {
+        
+    // }
 
     public static void main(String[] args) {
-    
+        Point2D centerPoint2d
     }
 }
