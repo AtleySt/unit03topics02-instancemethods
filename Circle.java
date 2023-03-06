@@ -22,11 +22,24 @@ public class Circle {
         return res;
     }
 
-    // public boolean intersects(Circle other) {
-        
-    // }
+    public boolean intersects(Circle other) {
+        if (center.distanceTo(other.center) < radius+other.radius) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public boolean contains(Circle other) {
+        if ((center.distanceTo(other.center) + other.radius) < radius) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 
     public static void main(String[] args) {
-        Point2D centerPoint2d
+        
     }
 }
